@@ -10,5 +10,6 @@ func TestConcurrency(t *testing.T) {
 	//
 	//concurrency.Race()
 
-	concurrency.Atomic()
+	//concurrency.Atomic()
+	concurrency.Channel()
 }
