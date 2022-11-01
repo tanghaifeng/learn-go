@@ -6,5 +6,9 @@ import (
 )
 
 func TestConcurrency(t *testing.T) {
-	concurrency.Concurrency()
+	//concurrency.Concurrency()
+	//
+	//concurrency.Race()
+
+	concurrency.Atomic()
 }

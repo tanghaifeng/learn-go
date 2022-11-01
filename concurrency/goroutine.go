@@ -8,9 +8,9 @@ import (
 
 func Concurrency() {
 
-	runtime.GOMAXPROCS(1)
-
-	var wg sync.WaitGroup
+	//runtime.GOMAXPROCS(1)
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	var wg sync.WaitGroup // 跟Java的 CountDownLatch 类似
 	wg.Add(2)
 
 	go func() {
