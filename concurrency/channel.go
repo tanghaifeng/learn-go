@@ -7,11 +7,9 @@ import (
 
 func Channel() {
 	c := make(chan int)
-
+	wg.Add(2)
 	go play("Tim", c)
 	go play("Ben", c)
-	wg.Add(2)
-
 	c <- 1
 	wg.Wait()
 }
@@ -31,7 +29,7 @@ func play(name string, count chan int) {
 			close(count)
 			return
 		}
-		fmt.Errorf("Play %s Hit %d\n", name, ball)
+		fmt.Printf("Play %s Hit %d \n", name, ball)
 		ball++
 		count <- ball
 	}
