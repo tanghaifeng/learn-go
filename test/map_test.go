@@ -7,5 +7,6 @@ import (
 
 func TestMap(t *testing.T) {
 
-	collection.Map()
+	//collection.Map()
+	collection.MapWithFuncValue()
 }
