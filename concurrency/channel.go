@@ -3,6 +3,7 @@ package concurrency
 import (
 	"fmt"
 	"math/rand"
+	"sync"
 )
 
 func Channel() {
@@ -33,4 +34,40 @@ func play(name string, count chan int) {
 		ball++
 		count <- ball
 	}
+}
+
+// 生产者消费者
+func ProducerAndReceiver() {
+	var wait sync.WaitGroup
+	ch := make(chan int)
+	wait.Add(1)
+	producer(ch, &wait)
+
+	wait.Add(1)
+	receiver(ch, &wait)
+	wait.Wait()
+
+}
+
+func producer(ch chan int, wg *sync.WaitGroup) {
+	go func() {
+		for i := 0; i < 10; i++ {
+			ch <- i
+		}
+		close(ch)
+		wg.Done()
+	}()
+}
+
+func receiver(ch chan int, wg *sync.WaitGroup) {
+	go func() {
+		for i := 0; i < 10; i++ {
+			if data, ok := <-ch; ok {
+				fmt.Println(data)
+			} else {
+				break
+			}
+		}
+		wg.Done()
+	}()
 }

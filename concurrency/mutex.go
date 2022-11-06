@@ -27,6 +27,9 @@ func intCounter1() {
 	defer wg.Done()
 
 	for count := 0; count < 2; count++ {
+		defer func() {
+			mutex.Unlock()
+		}()
 		mutex.Lock()
 		{
 			value := counter
@@ -36,7 +39,6 @@ func intCounter1() {
 			value++
 			counter = value
 		}
-		mutex.Unlock()
 	}
 
 }

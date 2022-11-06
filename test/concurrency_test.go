@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"learn/concurrency"
 	"testing"
-	"time"
 )
 
 func TestConcurrency(t *testing.T) {
@@ -14,11 +13,12 @@ func TestConcurrency(t *testing.T) {
 
 	//concurrency.Atomic()
 	//concurrency.Channel()
-	r := concurrency.New(time.Second * 10)
-	r.Add(a)
-	r.Add(b)
-	r.Add(c)
-	r.Start()
+	//r := concurrency.New(time.Second * 10)
+	//r.Add(a)
+	//r.Add(b)
+	//r.Add(c)
+	//r.Start()
+	concurrency.ProducerAndReceiver()
 }
 
 func a(c int) {
