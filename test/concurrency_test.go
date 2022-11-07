@@ -18,7 +18,12 @@ func TestConcurrency(t *testing.T) {
 	//r.Add(b)
 	//r.Add(c)
 	//r.Start()
-	concurrency.ProducerAndReceiver()
+	//concurrency.ProducerAndReceiver()
+	s1 := concurrency.GetInstance()
+	s2 := concurrency.GetInstance()
+	if s1 == s2 {
+		fmt.Println("===")
+	}
 }
 
 func a(c int) {
