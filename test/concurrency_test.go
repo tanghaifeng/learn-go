@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"learn/concurrency"
+	"learn-go/concurrency"
 	"testing"
 )
 

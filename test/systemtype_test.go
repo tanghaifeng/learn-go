@@ -1,7 +1,7 @@
 package test
 
 import (
-	"learn/systemtype"
+	"learn-go/systemtype"
 	"testing"
 )
 

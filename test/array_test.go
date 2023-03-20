@@ -1,7 +1,7 @@
 package test
 
 import (
-	"learn/collection"
+	"learn-go/collection"
 	"testing"
 )
 

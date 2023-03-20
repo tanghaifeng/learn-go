@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	error_type "learn/error"
+	error_type "learn-go/error"
 	"testing"
 )
 

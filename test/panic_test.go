@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	panic_demo "learn/panic"
+	panic_demo "learn-go/panic"
 	"testing"
 )
 

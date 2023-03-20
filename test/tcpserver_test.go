@@ -1,7 +1,7 @@
 package test
 
 import (
-	"learn/network"
+	"learn-go/network"
 	"testing"
 )
 

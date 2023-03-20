@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"learn/function"
+	"learn-go/function"
 	"testing"
 	"time"
 )
