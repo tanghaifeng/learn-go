@@ -1,6 +1,7 @@
 package test
 
 import (
+	"bytes"
 	"fmt"
 	"learn-go/systemtype"
 	"testing"
@@ -23,4 +24,8 @@ func TestSystemType(t *testing.T) {
 
 	u.Write([]byte("Hello"))
 	fmt.Fprintf(u, "world")
+
+	var b bytes.Buffer
+	b.Write([]byte("hello"))
+	fmt.Println(&b, "world")
 }

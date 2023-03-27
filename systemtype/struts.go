@@ -10,7 +10,7 @@ type User struct {
 func (u *User) Write(p []byte) (n int, err error) {
 	fmt.Println(u.Name)
 	fmt.Println(u.Age)
-	return 0, nil
+	return 1, nil
 }
 
 func (u *User) GetUserInfo() {
@@ -32,7 +32,5 @@ func GetUser(info UserInfo) {
 }
 
 func (u *User) Read(p []byte) (n int, err error) {
-	fmt.Println(u.Name)
-	fmt.Println(u.Age)
 	return 0, nil
 }
