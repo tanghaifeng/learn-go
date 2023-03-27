@@ -19,4 +19,7 @@ func Slice() {
 	fmt.Println(len(newSlice))
 	fmt.Println(cap(newSlice))
 
+	// ... 将一个切片所有元素追加到另一个切片中
+	fmt.Printf("%v\n", append(s, s1...))
+
 }
