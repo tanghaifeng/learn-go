@@ -1,7 +1,6 @@
 package test
 
 import (
-	"bytes"
 	"fmt"
 	"learn-go/systemtype"
 	"testing"
@@ -9,7 +8,7 @@ import (
 
 func TestSystemType(t *testing.T) {
 
-	u := &systemtype.User{Name: "Tim", Age: 30}
+	//u := &systemtype.User{Name: "Tim", Age: 30}
 
 	//systemtype.GetUser(u)
 	//
@@ -22,10 +21,13 @@ func TestSystemType(t *testing.T) {
 	//u1 := &systemtype.User{Name: "Joe", Age: 28}
 	//systemtype.GetUser(u1)
 
-	u.Write([]byte("Hello"))
-	fmt.Fprintf(u, "world")
+	//u.Write([]byte("Hello"))
+	//fmt.Fprintf(u, "world")
+	//
+	//var b bytes.Buffer
+	//b.Write([]byte("hello"))
+	//fmt.Println(&b, "world")
 
-	var b bytes.Buffer
-	b.Write([]byte("hello"))
-	fmt.Println(&b, "world")
+	counter := systemtype.New(1)
+	fmt.Printf("%v", counter)
 }
